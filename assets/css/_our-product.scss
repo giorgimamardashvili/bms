@@ -1,0 +1,157 @@
+.our-product {
+  background-color: $blue;
+  padding: 100px 100px 130px 100px;
+
+  @include lg {
+    padding: 55px 55px 90px 55px;
+  }
+  @include sm {
+      padding: 35px 20px 75px 20px;
+  }
+
+  h2 {
+    font-family: "MarkCAPS-bold";
+    font-size: 18px;
+    text-align: left;
+    color: $grey;
+    margin-bottom: 70px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(auto, auto));
+    grid-template-rows: 1fr;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 70px;
+
+    @include xl {
+      gap: 35px;
+    }
+    @include lg {
+      grid-template-columns: repeat(3, minmax(auto, auto));
+    }
+    @include m2 {
+        grid-template-columns: repeat(2, minmax(auto, auto));
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      margin-bottom: 25px;
+      transition: transform 0.2s;
+    }
+    h3 {
+      font-family: "MarkCAPS-bold";
+      font-size: 16px;
+      text-align: left;
+      color: #707b8a;
+      opacity: 0.5;
+      transition: transform 0.2s;
+      text-align: center;
+    }
+    a {
+      width: 130px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid $yellow;
+      border-radius: 20px;
+      color: $yellow;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "MarkCAPS-bold";
+      font-size: 12px;
+      transition: opacity 0.2s;
+
+      @include tab {
+          font-size: 18px;
+      }
+    }
+
+    &:hover {
+      svg {
+        transform: translateY(-25px);
+        path,
+        circle {
+          fill: $yellow;
+        }
+        g {
+          opacity: 1;
+        }
+      }
+      h3 {
+        transform: translateY(-25px);
+        color: $yellow;
+        opacity: 1;
+      }
+      a {
+        opacity: 1;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+
+    @include sm {
+        flex-direction: column;
+    }
+  }
+  &__text {
+    width: 680px;
+    height: 100px;
+    background: transparent;
+    overflow-y: scroll;
+    line-height: 28px;
+    text-align: left;
+    color: $grey;
+
+    @include tab {
+        width: 400px;
+    }
+    @include m2 {
+        width: 55%;
+    }
+    @include sm {
+        width: 100%;
+    }
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+    &::-webkit-scrollbar-track {
+      background:  rgba(#484e5b, 0.1);
+      height: 100px;
+    }
+    &::-webkit-scrollbar-thumb {
+      width: 9px;
+      height: 9px;
+      background: #484e5b;
+      border-radius: 50%;
+    }
+  }
+  &__link {
+    width: 220px;
+    font-family: "MarkCAPS-bold";
+    text-decoration: underline;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: left;
+    color: $grey;
+    margin-left: 15px;
+    cursor: pointer;
+
+    @include sm {
+        margin: 0;
+        margin-top: 40px;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.brands {
+    background-color: $white;
+    padding-top: 0px;
+
+    h2 {
+        color: $dark-blue;
+    }
+
+    &__container {
+        margin-bottom: 40px;
+
+        .swiper-slide {
+            width: 110px;
+            height: 110px;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .more {
+        margin: 0 auto;
+    }
+}

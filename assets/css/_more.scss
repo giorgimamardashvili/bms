@@ -1,0 +1,49 @@
+.more {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  cursor: pointer;
+
+  &:hover {
+    p {
+      color: $black;
+    }
+    .more__plus {
+      background-color: $yellow;
+    }
+  }
+
+  p {
+    color: $grey;
+    width: fit-content;
+    margin: 0 !important;
+    margin-right: 12px !important;
+  }
+
+  &__plus {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    span {
+      width: 8px;
+      height: 2px;
+      background-color: $white;
+      border-radius: 5px;
+
+      &:last-child {
+        width: 2px;
+        height: 8px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

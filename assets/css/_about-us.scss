@@ -1,0 +1,102 @@
+.about-us {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+
+  @include sm {
+    flex-direction: column-reverse;
+  }
+
+  &__left {
+    width: 60%;
+    padding: 50px 110px;
+
+    @include xl {
+      padding: 50px 60px;
+    }
+    @include tab {
+      width: 50%;
+    }
+    @include sm {
+      width: 100%;
+      padding: 50px 30px;
+    }
+  }
+  &__right {
+    width: 40%;
+    position: relative;
+    height: inherit;
+
+    @include tab {
+      width: 50%;
+      align-self: center;
+    }
+    @include sm {
+      width: 100%;
+    }
+  }
+}
+
+.left-aboutUs {
+  h2 {
+    font-family: "MarkCAPS-bold";
+    font-size: 20px;
+    text-align: left;
+    color: #162235;
+    margin-bottom: 35px;
+
+    @include xl {
+      font-size: 18px;
+    }
+    @include sm {
+        display: none;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+    color: $grey;
+    margin-bottom: 35px;
+  }
+}
+
+.right-aboutUs {
+  &__img {
+    width: 100%;
+    position: relative;
+    padding: 60px 0;
+
+    h2 {
+      font-family: "MarkCAPS-bold";
+      font-size: 20px;
+      text-align: left;
+      color: #162235;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      display: none;
+
+      @include sm {
+          display: initial;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__yellow {
+    width: 30%;
+    margin-left: auto;
+    height: 125%;
+    background-color: $yellow;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
